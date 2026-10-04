@@ -1,5 +1,6 @@
 """Commitment management and human review service."""
 
+from datetime import datetime
 from typing import List, Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.exceptions import NotFoundError
@@ -41,7 +42,11 @@ class CommitmentService:
             for e in commitment.evidence_items
         ]
 
-        latest_ver = commitment.verification_results[-1] if commitment.verification_results else None
+        latest_ver = (
+            max(commitment.verification_results, key=lambda v: getattr(v, "created_at", None) or getattr(v, "verified_at", None) or datetime.min)
+            if commitment.verification_results
+            else None
+        )
         ver_dict = None
         if latest_ver:
             ver_dict = {
@@ -55,7 +60,11 @@ class CommitmentService:
                 "verified_at": latest_ver.verified_at.isoformat() if latest_ver.verified_at else None,
             }
 
-        latest_followup = commitment.followups[-1] if commitment.followups else None
+        latest_followup = (
+            max(commitment.followups, key=lambda f: getattr(f, "created_at", None) or datetime.min)
+            if commitment.followups
+            else None
+        )
         followup_dict = None
         if latest_followup:
             followup_dict = {

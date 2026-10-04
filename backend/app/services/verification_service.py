@@ -33,8 +33,8 @@ class VerificationService:
         if not commitment:
             raise NotFoundError("commitment", commitment_id)
 
-        # 1. Fetch all evidence linked to this commitment
-        evidence_items = await self.evidence_repo.list_by_commitment(commitment_id)
+        # 1. Fetch all evidence linked to this commitment or unassigned in workspace
+        evidence_items = await self.evidence_repo.list_by_commitment(commitment_id, include_unassigned=True)
 
         # 2. Retrieve ranked candidate chunks
         candidate_chunks = evidence_retriever.retrieve(
@@ -43,14 +43,24 @@ class VerificationService:
             top_k=8,
         )
 
-        # 3. Execute Verification Agent
+        # 3. Associate any unassigned evidence files whose chunks matched this commitment
+        for ev in evidence_items:
+            if ev.commitment_id is None:
+                matching_chunks = [c for c in candidate_chunks if c.evidence_id == ev.id and c.relevance_score >= 0.20]
+                if matching_chunks:
+                    ev.commitment_id = commitment.id
+                    ev.relevance_score = max(c.relevance_score for c in matching_chunks)
+                    self.session.add(ev)
+
+        # 4. Execute Verification Agent
         ver_response = await verification_agent.verify(
             commitment=commitment,
             candidate_evidence=candidate_chunks,
             notes=notes,
         )
 
-        # 4. Persist VerificationResult
+        # 5. Persist VerificationResult
+        now_dt = datetime.utcnow()
         ver_id = generate_uuid()
         result_model = VerificationResult(
             id=ver_id,
@@ -61,12 +71,14 @@ class VerificationService:
             missing_items=ver_response.missing_items,
             contradictions=ver_response.contradictions,
             confidence=ver_response.confidence,
-            verified_at=datetime.utcnow(),
+            verified_at=now_dt,
+            created_at=now_dt,
         )
         await self.verification_repo.create(result_model)
 
-        # 5. Update Commitment status to match verification
+        # 6. Update Commitment status to match verification
         await self.commitment_repo.update(commitment, {"status": ver_response.status})
+        await self.session.commit()
 
         ver_response.id = ver_id
         logger.info(

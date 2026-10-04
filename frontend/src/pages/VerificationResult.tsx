@@ -26,6 +26,7 @@ export const VerificationResultPage: React.FC = () => {
         if (c) {
           const v = await verifyCommitment(c.id);
           setResult(v);
+          setCommitment((prev) => (prev ? { ...prev, status: v.status } : null));
         }
       } catch (err) {
         console.error('Failed to load verification:', err);
@@ -42,6 +43,7 @@ export const VerificationResultPage: React.FC = () => {
     try {
       const v = await verifyCommitment(id);
       setResult(v);
+      setCommitment((prev) => (prev ? { ...prev, status: v.status } : null));
     } finally {
       setReverifying(false);
     }

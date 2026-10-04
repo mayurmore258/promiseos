@@ -46,5 +46,5 @@ class Commitment(Base):
     # Relationships
     user: Mapped[Optional["User"]] = relationship("User", back_populates="commitments")
     evidence_items: Mapped[List["Evidence"]] = relationship("Evidence", back_populates="commitment", cascade="all, delete-orphan")
-    verification_results: Mapped[List["VerificationResult"]] = relationship("VerificationResult", back_populates="commitment", cascade="all, delete-orphan")
-    followups: Mapped[List["Followup"]] = relationship("Followup", back_populates="commitment", cascade="all, delete-orphan")
+    verification_results: Mapped[List["VerificationResult"]] = relationship("VerificationResult", back_populates="commitment", cascade="all, delete-orphan", order_by="VerificationResult.created_at")
+    followups: Mapped[List["Followup"]] = relationship("Followup", back_populates="commitment", cascade="all, delete-orphan", order_by="Followup.created_at")
