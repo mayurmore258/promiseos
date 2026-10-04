@@ -42,6 +42,7 @@ export const CommitmentDetails: React.FC = () => {
         if (c) {
           const v = await verifyCommitment(c.id);
           setVerification(v);
+          setCommitment((prev) => (prev ? { ...prev, status: v.status } : null));
           const allEv = await getEvidence();
           const matched = allEv.filter(
             (e) => e.commitmentId === c.id || c.expectedEvidence.includes(e.fileName)
@@ -63,6 +64,16 @@ export const CommitmentDetails: React.FC = () => {
     try {
       const v = await verifyCommitment(commitment.id);
       setVerification(v);
+      setCommitment((prev) => (prev ? { ...prev, status: v.status } : null));
+
+      // Refresh linked evidence list for this commitment
+      const allEv = await getEvidence();
+      const matched = allEv.filter(
+        (e) => e.commitmentId === commitment.id || commitment.expectedEvidence.includes(e.fileName)
+      );
+      if (matched.length > 0) {
+        setEvidenceList(matched);
+      }
     } finally {
       setVerifying(false);
     }

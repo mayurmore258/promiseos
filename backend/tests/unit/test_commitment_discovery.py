@@ -118,3 +118,46 @@ def test_changed_deadline_handling():
     assert dt1 is not None and dt2 is not None
     # Both resolve distinctly without collision
     assert dt1 != dt2
+
+
+@pytest.mark.asyncio
+async def test_multi_speaker_dialogue_with_typographic_quotes():
+    """Scenario: Multi-turn conversation with curly apostrophes (’) and en-dash (–).
+
+    Must extract exactly 3 explicit commitments:
+    1. Priya: complete questions 1-5 tonight
+    2. Neha: complete questions 6-10 and send them tomorrow morning
+    3. Priya: combine everything and submit assignment tomorrow
+    The question 'Have you completed the DBMS assignment?' must NOT be extracted as a commitment.
+    """
+    text = (
+        "Neha: Have you completed the DBMS assignment?\n"
+        "Priya: Not yet. I’ll complete questions 1–5 tonight.\n"
+        "Neha: Okay, I’ll complete questions 6–10 and send them to you tomorrow morning.\n"
+        "Priya: Perfect. Then I’ll combine everything and submit the assignment tomorrow."
+    )
+    commitments = await commitment_agent.extract_commitments(text)
+
+    assert len(commitments) == 3, f"Expected 3 commitments, got {len(commitments)}"
+
+    # Commitment 1: Priya
+    c1 = commitments[0]
+    assert c1.person == "Priya"
+    assert "1" in c1.object and "5" in c1.object
+    assert c1.deadline_raw == "tonight"
+    assert "complete" in c1.action.lower()
+
+    # Commitment 2: Neha
+    c2 = commitments[1]
+    assert c2.person == "Neha"
+    assert "6" in c2.object and "10" in c2.object
+    assert c2.deadline_raw == "tomorrow morning"
+    assert any(act in c2.action.lower() for act in ("complete", "send"))
+
+    # Commitment 3: Priya
+    c3 = commitments[2]
+    assert c3.person == "Priya"
+    assert any(obj in c3.object.lower() for obj in ("assignment", "deliverable"))
+    assert c3.deadline_raw == "tomorrow"
+    assert any(act in c3.action.lower() for act in ("combine", "submit"))
+

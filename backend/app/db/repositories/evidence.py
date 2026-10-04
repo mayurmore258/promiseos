@@ -33,13 +33,16 @@ class EvidenceRepository:
         result = await self.session.execute(stmt)
         return result.scalars().first()
 
-    async def list_by_commitment(self, commitment_id: str) -> List[Evidence]:
+    async def list_by_commitment(self, commitment_id: str, include_unassigned: bool = False) -> List[Evidence]:
         stmt = (
             select(Evidence)
-            .where(Evidence.commitment_id == commitment_id)
             .options(selectinload(Evidence.chunks))
             .order_by(desc(Evidence.created_at))
         )
+        if include_unassigned:
+            stmt = stmt.where((Evidence.commitment_id == commitment_id) | (Evidence.commitment_id.is_(None)))
+        else:
+            stmt = stmt.where(Evidence.commitment_id == commitment_id)
         result = await self.session.execute(stmt)
         return list(result.scalars().all())
 

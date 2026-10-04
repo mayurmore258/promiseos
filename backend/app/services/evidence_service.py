@@ -13,6 +13,7 @@ from app.schemas.evidence import (
     EvidenceSearchResult,
     EvidenceUploadResponse,
 )
+from app.evidence.retrieval import evidence_retriever
 from app.services.file_service import file_service
 from app.utils.ids import generate_uuid
 
@@ -50,6 +51,28 @@ class EvidenceService:
             chunks,
             raw_text,
         ) = file_service.process_file_content(file_bytes, original_filename, content_type)
+
+        # If commitment_id not provided, attempt matching against existing active commitments
+        if not commitment_id:
+            active_commitments = await self.commitment_repo.list(limit=50)
+            best_comm = None
+            best_score = 0.0
+            test_ev = Evidence(
+                id="temp",
+                file_name=clean_name,
+                raw_text=raw_text,
+                chunks=[
+                    EvidenceChunk(id=f"temp_{c['chunk_index']}", evidence_id="temp", chunk_index=c["chunk_index"], content=c["content"])
+                    for c in chunks
+                ],
+            )
+            for comm in active_commitments:
+                matches = evidence_retriever.retrieve(commitment=comm, evidence_items=[test_ev], top_k=1)
+                if matches and matches[0].relevance_score > best_score and matches[0].relevance_score >= 0.35:
+                    best_score = matches[0].relevance_score
+                    best_comm = comm
+            if best_comm:
+                commitment_id = best_comm.id
 
         # Check for duplicate file for this commitment
         existing = await self.evidence_repo.find_by_hash(content_hash, commitment_id=commitment_id)
@@ -129,7 +152,7 @@ class EvidenceService:
         if not commitment:
             raise NotFoundError("commitment", commitment_id)
 
-        evidence_items = await self.evidence_repo.list_by_commitment(commitment_id)
+        evidence_items = await self.evidence_repo.list_by_commitment(commitment_id, include_unassigned=True)
         return await evidence_agent.search_evidence(
             commitment=commitment,
             evidence_items=evidence_items,

@@ -56,35 +56,58 @@ class MockLLMProvider(BaseLLMProvider):
     def _extract_commitments(self, text: str) -> List[Dict[str, Any]]:
         """Extracts commitments deterministically from conversation text."""
         commitments = []
-        raw_lines = [line.strip() for line in text.splitlines() if line.strip()]
 
-        # Split compound clauses if " and I'll " or " and I will " or " and we'll " exists
+        # 1. Normalize typographic/smart punctuation (curly quotes, smart apostrophes, en/em dashes)
+        normalized_text = (
+            text.replace("\u2019", "'")
+            .replace("\u2018", "'")
+            .replace("\u201c", '"')
+            .replace("\u201d", '"')
+            .replace("\u2013", "-")
+            .replace("\u2014", "-")
+        )
+
         raw_lines = []
-        for line in text.splitlines():
+        for line in normalized_text.splitlines():
             line_str = line.strip()
             if not line_str:
                 continue
-            # If line has multiple sentences with commitment markers, split them
-            sentences = re.split(r"(?<=[.!?])\s+(?=(?:i'll|i\s+will|we'll|we\s+will|rahul:|mayur:|[A-Z][a-z]+:)\b)", line_str, flags=re.IGNORECASE)
-            raw_lines.extend([s.strip() for s in sentences if s.strip()])
-
-        lines = []
-        for line in raw_lines:
-            # Check for speaker prefix e.g. "Rahul: ..."
             speaker_prefix = ""
-            content = line
-            if ":" in line:
-                parts = line.split(":", 1)
-                speaker_prefix = parts[0].strip() + ": "
-                content = parts[1].strip()
+            content = line_str
+            if ":" in line_str:
+                parts = line_str.split(":", 1)
+                # Find the speaker immediately preceding the colon
+                speaker_match = re.search(r"([A-Za-z0-9_\s]{1,30})$", parts[0].strip())
+                if speaker_match and not any(kw in parts[0].lower() for kw in ["http", "https"]):
+                    cand = speaker_match.group(1).strip()
+                    # If cand has sentence punctuation, take the final segment
+                    cand_clean = re.split(r"[.!?]\s*", cand)[-1].strip()
+                    if cand_clean and len(cand_clean.split()) <= 3:
+                        speaker_prefix = cand_clean + ": "
+                        content = parts[1].strip()
 
-            sub_clauses = re.split(r"\s+and\s+(?=(?:i'll|i\s+will|we'll|we\s+will)\b)", content, flags=re.IGNORECASE)
-            for sc in sub_clauses:
-                lines.append(f"{speaker_prefix}{sc.strip()}".strip())
+            # Split sentences within this turn
+            sentences = re.split(
+                r"(?<=[.!?])\s+(?=(?:i'll|i\s+will|we'll|we\s+will|then\s+i'll|then\s+i\s+will|[A-Za-z]+:)\b)",
+                content,
+                flags=re.IGNORECASE,
+            )
+            for s in sentences:
+                s_str = s.strip()
+                if not s_str:
+                    continue
+                # Split compound clauses on " and I'll " etc.
+                sub_clauses = re.split(r"\s+and\s+(?=(?:i'll|i\s+will|we'll|we\s+will)\b)", s_str, flags=re.IGNORECASE)
+                for sc in sub_clauses:
+                    sc_str = sc.strip()
+                    if sc_str:
+                        if speaker_prefix and not sc_str.startswith(speaker_prefix) and ":" not in sc_str:
+                            raw_lines.append(f"{speaker_prefix}{sc_str}")
+                        else:
+                            raw_lines.append(sc_str)
 
-        for line in lines:
+        for line in raw_lines:
             line_lower = line.lower()
-            # Extract speaker if "Speaker: message"
             speaker = "Unknown"
             msg = line
             if ":" in line:
@@ -93,10 +116,31 @@ class MockLLMProvider(BaseLLMProvider):
                 msg = parts[1].strip()
             msg_lower = msg.lower()
 
-            # Skip acknowledgments and purely past discussions (non-commitments)
-            if msg_lower in ("okay.", "ok", "sure", "thanks", "got it", "fine."):
+            # Skip questions (e.g. "Have you completed the DBMS assignment?")
+            if msg_lower.endswith("?") or msg_lower.startswith(("have you ", "did you ", "can you ", "could you ", "will you ")):
                 continue
-            if not any(pat in msg_lower for pat in ["i'll", "i will", "promise to", "we will", "we'll", "will send", "will update", "i completed", "completed the payment", "i have completed", "completed payment"]):
+
+            # Strip leading conversational fillers / acknowledgments from message for cleaner extraction
+            clean_msg = re.sub(
+                r"^(?:okay|ok|perfect|sure|thanks|got it|fine|great|not yet|yes)[,.]?\s*",
+                "",
+                msg,
+                flags=re.IGNORECASE,
+            ).strip()
+            clean_lower = clean_msg.lower()
+
+            # Skip pure acknowledgments and non-commitment filler
+            if clean_lower in ("", "okay.", "ok", "sure", "thanks", "got it", "fine.", "perfect.", "not yet.", "not yet", "yes.", "yes"):
+                continue
+
+            # Check for commitment markers
+            commitment_markers = [
+                "i'll", "i will", "promise to", "promise i'll", "promise i will",
+                "we will", "we'll", "will send", "will update",
+                "will complete", "will submit", "will deliver", "then i'll", "then i will",
+                "i completed", "completed the payment", "i have completed", "completed payment"
+            ]
+            if not any(pat in clean_lower or pat in msg_lower for pat in commitment_markers):
                 continue
 
             # Identify committer person or target entity
@@ -106,23 +150,38 @@ class MockLLMProvider(BaseLLMProvider):
                     person = "Rahul"
                 elif "mayur" in msg_lower:
                     person = "Mayur"
+                elif "priya" in msg_lower:
+                    person = "Priya"
+                elif "neha" in msg_lower:
+                    person = "Neha"
 
-            # Extract deadline text if present
+            # Extract deadline text if present (match longer specific terms first)
             dl = None
-            for term in ["tonight", "tomorrow", "next friday", "next monday", "this week", "by friday at 5 pm", "by friday", "friday at 5 pm", "friday", "monday", "by 5pm", "soon", "later", "today", "thursday"]:
-                if term in msg_lower:
+            deadline_terms = [
+                "by friday at 5 pm", "friday at 5 pm", "by friday at 5pm", "friday at 5pm",
+                "by 5 pm", "by 5pm", "at 5 pm", "at 5pm",
+                "tomorrow morning", "tomorrow afternoon", "tomorrow evening", "tomorrow night",
+                "this morning", "this afternoon", "this evening",
+                "next friday", "next monday", "next week", "this week",
+                "tonight", "tomorrow", "today",
+                "by friday", "friday", "monday", "thursday",
+                "soon", "later"
+            ]
+            for term in deadline_terms:
+                if term in clean_lower or term in msg_lower:
                     dl = term
                     break
 
+            # Extract action and object
             # Case 1: Send quotation / proposal
-            if "quotation" in msg_lower or "quote" in msg_lower or "proposal" in msg_lower:
-                obj = "quotation" if ("quotation" in msg_lower or "quote" in msg_lower) else ("revised proposal" if "revised" in msg_lower else "proposal")
+            if "quotation" in clean_lower or "quote" in clean_lower or "proposal" in clean_lower:
+                obj = "quotation" if ("quotation" in clean_lower or "quote" in clean_lower) else ("revised proposal" if "revised" in clean_lower else "proposal")
                 action = "Send"
                 commitments.append({
                     "person": person,
                     "action": action,
                     "object": obj,
-                    "description": msg if "if " in msg_lower else f"{action} the {obj}",
+                    "description": clean_msg if "if " in clean_lower else f"{action} the {obj}",
                     "deadline_raw": dl or "tonight",
                     "source": "conversation",
                     "source_excerpt": line,
@@ -135,14 +194,14 @@ class MockLLMProvider(BaseLLMProvider):
                     "status": "pending",
                 })
             # Case 2: Update pricing sheet / thing
-            elif "pricing" in msg_lower or "sheet" in msg_lower:
-                obj = "pricing sheet" if "sheet" in msg_lower else ("pricing thing" if "thing" in msg_lower else "pricing updates")
-                action = "Take care" if "take care" in msg_lower else "Update"
+            elif "pricing" in clean_lower or ("sheet" in clean_lower and "pricing" in clean_lower):
+                obj = "pricing sheet" if "sheet" in clean_lower else ("pricing thing" if "thing" in clean_lower else "pricing updates")
+                action = "Take care" if "take care" in clean_lower else "Update"
                 commitments.append({
                     "person": person,
                     "action": action,
                     "object": obj,
-                    "description": msg if "if " in msg_lower else f"{action} the {obj}",
+                    "description": clean_msg if "if " in clean_lower else f"{action} the {obj}",
                     "deadline_raw": dl or "tomorrow",
                     "source": "conversation",
                     "source_excerpt": line,
@@ -154,37 +213,43 @@ class MockLLMProvider(BaseLLMProvider):
                     "confidence": 0.92,
                     "status": "pending",
                 })
-            # Case 3: Conditional or generic commitment
+            # Case 3: Questions / Assignment / General deliverables
             else:
                 action = "Complete"
                 obj = "deliverable"
-                for act in ["send", "submit", "prepare", "deliver", "review", "call", "schedule", "share", "upload", "complete"]:
-                    if act in msg_lower:
+                for act in ["combine", "submit", "prepare", "deliver", "review", "call", "schedule", "share", "upload", "complete", "send"]:
+                    if act in clean_lower:
                         action = act.capitalize()
                         break
 
-                if "final files" in msg_lower or "files" in msg_lower:
-                    obj = "final files"
-                elif "report" in msg_lower:
-                    obj = "report"
-                elif "investor deck" in msg_lower or "deck" in msg_lower:
-                    obj = "investor deck"
-                elif "meeting" in msg_lower:
-                    obj = "meeting"
-                elif "document" in msg_lower:
-                    obj = "document"
-                elif "payment" in msg_lower:
-                    obj = "payment"
-                elif "assignment" in msg_lower:
+                if "question" in clean_lower:
+                    m = re.search(r"questions?\s*[\d\w–-]+", clean_lower)
+                    obj = m.group(0) if m else "questions"
+                elif "assignment" in clean_lower:
                     obj = "assignment"
-                elif "database migration" in msg_lower or "migration" in msg_lower:
+                elif "final files" in clean_lower or "files" in clean_lower:
+                    obj = "final files"
+                elif "report" in clean_lower:
+                    obj = "report"
+                elif "investor deck" in clean_lower or "deck" in clean_lower:
+                    obj = "investor deck"
+                elif "meeting" in clean_lower:
+                    obj = "meeting"
+                elif "document" in clean_lower:
+                    obj = "document"
+                elif "payment" in clean_lower:
+                    obj = "payment"
+                elif "database migration" in clean_lower or "migration" in clean_lower:
                     obj = "database migration & deployment"
+
+                # Clean description of leading "then " if present
+                desc_text = re.sub(r"^then\s+", "", clean_msg, flags=re.IGNORECASE)
 
                 commitments.append({
                     "person": person,
                     "action": action,
                     "object": obj,
-                    "description": msg,
+                    "description": desc_text,
                     "deadline_raw": dl,
                     "source": "conversation",
                     "source_excerpt": line,
