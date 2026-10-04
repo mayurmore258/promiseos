@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+  --surface: #f8f9ff;
+  --surface-bright: #ffffff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #eff4ff;
+  --surface-container: #e5eeff;
+  --surface-container-high: #dce9ff;
+  --surface-container-highest: #d3e4fe;
+  --on-surface: #0b1c30;
+  --on-surface-variant: #596173;
+  --primary: #0f172a;
+  --on-primary: #ffffff;
+  --primary-container: #131b2e;
+  --on-primary-container: #7c839b;
+  --secondary: #0051d5;
+  --on-secondary: #ffffff;
+  --secondary-container: #316bf3;
+  --on-secondary-container: #fefcff;
+  --secondary-fixed: #dbe1ff;
+  --on-secondary-fixed: #00174b;
+  --secondary-fixed-dim: #b4c5ff;
+  --on-secondary-fixed-variant: #003ea8;
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+  --outline: #76777d;
+  --outline-variant: #e2e8f0;
+}
+
+.dark {
+  --surface: #090d16;
+  --surface-bright: #111a2d;
+  --surface-container-lowest: #0e1626;
+  --surface-container-low: #141f36;
+  --surface-container: #1c2a47;
+  --surface-container-high: #24365a;
+  --surface-container-highest: #2d436e;
+  --on-surface: #f8f9ff;
+  --on-surface-variant: #94a3b8;
+  --primary: #ffffff;
+  --on-primary: #090d16;
+  --primary-container: #24365a;
+  --on-primary-container: #dae2fd;
+  --secondary: #3b82f6;
+  --on-secondary: #ffffff;
+  --secondary-container: #2563eb;
+  --on-secondary-container: #ffffff;
+  --secondary-fixed: #1e293b;
+  --on-secondary-fixed: #93c5fd;
+  --secondary-fixed-dim: #1e3a8a;
+  --on-secondary-fixed-variant: #bfdbfe;
+  --error: #f87171;
+  --on-error: #450a0a;
+  --error-container: #3f1111;
+  --on-error-container: #fca5a5;
+  --outline: #64748b;
+  --outline-variant: #1e293b;
+}
+
+@theme {
+  --color-surface: var(--surface);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-on-secondary-fixed: var(--on-secondary-fixed);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-on-secondary-fixed-variant: var(--on-secondary-fixed-variant);
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  --font-headline: Geist, sans-serif;
+  --font-body: Inter, sans-serif;
+  --font-mono: JetBrains Mono, monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
