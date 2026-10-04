@@ -1,0 +1,201 @@
+id,label,reason
+hidden_0001,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0002,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0003,COMMITMENT,Explicit promissory undertaking
+hidden_0004,COMMITMENT,Assurance with affirmative future commitment
+hidden_0005,COMMITMENT,Explicit promissory undertaking
+hidden_0006,NON_COMMITMENT,Question consulting others on timing
+hidden_0007,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0008,COMMITMENT,Conditional undertaking with concrete trigger
+hidden_0009,NON_COMMITMENT,Vague speculative consideration
+hidden_0010,COMMITMENT,Personal delivery commitment
+hidden_0011,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0012,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0013,COMMITMENT,Assurance with affirmative future commitment
+hidden_0014,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0015,COMMITMENT,Colloquial intense personal commitment
+hidden_0016,COMMITMENT,First-person commitment tied to event deadline
+hidden_0017,NON_COMMITMENT,Group question/suggestion without individual undertaking
+hidden_0018,COMMITMENT,Assurance with affirmative future commitment
+hidden_0019,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0020,COMMITMENT,Personal delivery commitment
+hidden_0021,COMMITMENT,Explicit promissory guarantee with deadline
+hidden_0022,COMMITMENT,Conditional technical undertaking
+hidden_0023,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0024,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0025,COMMITMENT,Colloquial intense personal commitment
+hidden_0026,COMMITMENT,Third-person verified commitment
+hidden_0027,COMMITMENT,Explicit promissory undertaking
+hidden_0028,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0029,NON_COMMITMENT,Question consulting others on timing
+hidden_0030,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0031,COMMITMENT,Colloquial intense personal commitment
+hidden_0032,NON_COMMITMENT,Vague speculative consideration
+hidden_0033,COMMITMENT,Personal delivery commitment
+hidden_0034,COMMITMENT,Accountability acceptance with deployment undertaking
+hidden_0035,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0036,COMMITMENT,Assurance with affirmative future commitment
+hidden_0037,COMMITMENT,Conditional artifact delivery commitment
+hidden_0038,COMMITMENT,Personal delivery commitment
+hidden_0039,COMMITMENT,Colloquial intense personal commitment
+hidden_0040,COMMITMENT,Conditional technical undertaking
+hidden_0041,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0042,COMMITMENT,Assurance with affirmative future commitment
+hidden_0043,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0044,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0045,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0046,NON_COMMITMENT,Reminder instruction directed at others
+hidden_0047,COMMITMENT,Personal delivery commitment
+hidden_0048,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0049,NON_COMMITMENT,Question consulting others on timing
+hidden_0050,COMMITMENT,Formal executive deliverable commitment
+hidden_0051,NON_COMMITMENT,Vague speculative consideration
+hidden_0052,NON_COMMITMENT,Vague speculative consideration
+hidden_0053,NON_COMMITMENT,Weak hypothetical possibility ('might') without obligation
+hidden_0054,COMMITMENT,Conditional technical undertaking
+hidden_0055,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0056,COMMITMENT,Personal delivery commitment
+hidden_0057,COMMITMENT,Assurance with affirmative future commitment
+hidden_0058,NON_COMMITMENT,Question consulting others on timing
+hidden_0059,NON_COMMITMENT,Vague speculative consideration
+hidden_0060,COMMITMENT,Personal delivery commitment
+hidden_0061,COMMITMENT,Assurance with affirmative future commitment
+hidden_0062,COMMITMENT,Colloquial intense personal commitment
+hidden_0063,COMMITMENT,Explicit promissory undertaking
+hidden_0064,COMMITMENT,Promissory commitment with explicit count and date
+hidden_0065,COMMITMENT,Conditional technical undertaking
+hidden_0066,COMMITMENT,Personal delivery commitment
+hidden_0067,COMMITMENT,Assurance with affirmative future commitment
+hidden_0068,COMMITMENT,Conditional technical undertaking
+hidden_0069,COMMITMENT,Colloquial intense personal commitment
+hidden_0070,NON_COMMITMENT,Recognition / celebration note
+hidden_0071,NON_COMMITMENT,Question consulting others on timing
+hidden_0072,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0073,NON_COMMITMENT,Question consulting others on timing
+hidden_0074,COMMITMENT,Personal delivery commitment
+hidden_0075,COMMITMENT,Assurance with affirmative future commitment
+hidden_0076,NON_COMMITMENT,Question consulting others on timing
+hidden_0077,COMMITMENT,Explicit promissory undertaking
+hidden_0078,COMMITMENT,Explicit promissory undertaking
+hidden_0079,COMMITMENT,Colloquial intense personal commitment
+hidden_0080,COMMITMENT,Colloquial intense personal commitment
+hidden_0081,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0082,COMMITMENT,Explicit promissory undertaking
+hidden_0083,COMMITMENT,Conditional technical undertaking
+hidden_0084,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0085,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0086,COMMITMENT,Conditional technical undertaking
+hidden_0087,COMMITMENT,Colloquial intense personal commitment
+hidden_0088,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0089,COMMITMENT,Explicit promissory undertaking
+hidden_0090,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0091,NON_COMMITMENT,Vague speculative consideration
+hidden_0092,COMMITMENT,Colloquial intense personal commitment
+hidden_0093,COMMITMENT,Assurance with affirmative future commitment
+hidden_0094,NON_COMMITMENT,Status query about incoming communication
+hidden_0095,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0096,NON_COMMITMENT,Question consulting others on timing
+hidden_0097,NON_COMMITMENT,Question consulting others on timing
+hidden_0098,COMMITMENT,Explicit promissory undertaking
+hidden_0099,COMMITMENT,Personal delivery commitment
+hidden_0100,COMMITMENT,Personal delivery commitment
+hidden_0101,NON_COMMITMENT,Question consulting others on timing
+hidden_0102,COMMITMENT,Assurance with affirmative future commitment
+hidden_0103,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0104,COMMITMENT,Personal delivery commitment
+hidden_0105,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0106,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0107,COMMITMENT,Explicit promissory undertaking
+hidden_0108,COMMITMENT,Colloquial intense personal commitment
+hidden_0109,COMMITMENT,Explicit promissory undertaking
+hidden_0110,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0111,COMMITMENT,Conditional technical undertaking
+hidden_0112,NON_COMMITMENT,Vague speculative consideration
+hidden_0113,COMMITMENT,Explicit promissory undertaking
+hidden_0114,NON_COMMITMENT,Modal obligation ('should') without actual commitment
+hidden_0115,COMMITMENT,Assurance with affirmative future commitment
+hidden_0116,COMMITMENT,Assurance with affirmative future commitment
+hidden_0117,NON_COMMITMENT,Question consulting others on timing
+hidden_0118,COMMITMENT,Assurance with affirmative future commitment
+hidden_0119,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0120,COMMITMENT,Assurance with affirmative future commitment
+hidden_0121,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0122,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0123,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0124,NON_COMMITMENT,Vague speculative consideration
+hidden_0125,COMMITMENT,Conditional technical undertaking
+hidden_0126,COMMITMENT,Personal delivery commitment
+hidden_0127,COMMITMENT,Explicit promissory undertaking
+hidden_0128,NON_COMMITMENT,Historical incident reporting fact
+hidden_0129,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0130,COMMITMENT,Personal delivery commitment
+hidden_0131,NON_COMMITMENT,Vague speculative consideration
+hidden_0132,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0133,NON_COMMITMENT,Vague speculative consideration
+hidden_0134,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0135,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0136,COMMITMENT,Explicit promissory undertaking
+hidden_0137,COMMITMENT,Conditional technical undertaking
+hidden_0138,COMMITMENT,Personal delivery commitment
+hidden_0139,NON_COMMITMENT,Value judgment / ethical stance
+hidden_0140,NON_COMMITMENT,Vague speculative consideration
+hidden_0141,COMMITMENT,Colloquial intense personal commitment
+hidden_0142,COMMITMENT,Explicit promissory undertaking
+hidden_0143,COMMITMENT,Conditional technical undertaking
+hidden_0144,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0145,COMMITMENT,Colloquial intense personal commitment
+hidden_0146,NON_COMMITMENT,Question consulting others on timing
+hidden_0147,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0148,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0149,COMMITMENT,Colloquial intense personal commitment
+hidden_0150,NON_COMMITMENT,Question consulting others on timing
+hidden_0151,COMMITMENT,Personal delivery commitment
+hidden_0152,COMMITMENT,Personal delivery commitment
+hidden_0153,COMMITMENT,Delegated responsibility acceptance with time window
+hidden_0154,NON_COMMITMENT,Vague speculative consideration
+hidden_0155,COMMITMENT,Conditional technical undertaking
+hidden_0156,NON_COMMITMENT,Unrealized intention aborted due to illness
+hidden_0157,COMMITMENT,Conditional technical undertaking
+hidden_0158,COMMITMENT,Explicit promissory undertaking
+hidden_0159,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0160,NON_COMMITMENT,Question consulting others on timing
+hidden_0161,NON_COMMITMENT,Vague speculative consideration
+hidden_0162,COMMITMENT,Conditional technical undertaking
+hidden_0163,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0164,COMMITMENT,Personal delivery commitment
+hidden_0165,COMMITMENT,Assurance with affirmative future commitment
+hidden_0166,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0167,COMMITMENT,Conditional technical undertaking
+hidden_0168,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0169,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0170,NON_COMMITMENT,Vague speculative consideration
+hidden_0171,NON_COMMITMENT,Vague speculative consideration
+hidden_0172,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0173,COMMITMENT,Colloquial intense personal commitment
+hidden_0174,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0175,NON_COMMITMENT,Vague speculative consideration
+hidden_0176,NON_COMMITMENT,Explicit refusal / negative commitment
+hidden_0177,COMMITMENT,Colloquial intense personal commitment
+hidden_0178,NON_COMMITMENT,Vague speculative consideration
+hidden_0179,NON_COMMITMENT,Direct explicit refusal to commit
+hidden_0180,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0181,NON_COMMITMENT,Question consulting others on timing
+hidden_0182,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0183,COMMITMENT,Conditional technical undertaking
+hidden_0184,NON_COMMITMENT,Question consulting others on timing
+hidden_0185,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0186,COMMITMENT,Colloquial intense personal commitment
+hidden_0187,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0188,NON_COMMITMENT,Vague speculative consideration
+hidden_0189,NON_COMMITMENT,Wishful thinking / aspiration
+hidden_0190,COMMITMENT,Explicit promissory undertaking
+hidden_0191,COMMITMENT,Assurance with affirmative future commitment
+hidden_0192,NON_COMMITMENT,Inquiry about past deliverable status
+hidden_0193,COMMITMENT,Conditional technical undertaking
+hidden_0194,COMMITMENT,Assurance with affirmative future commitment
+hidden_0195,COMMITMENT,Conditional technical undertaking
+hidden_0196,COMMITMENT,Reassurance coupled with concrete physical deliverable commitment
+hidden_0197,COMMITMENT,Explicit promissory undertaking
+hidden_0198,NON_COMMITMENT,Question consulting others on timing
+hidden_0199,COMMITMENT,Colloquial intense personal commitment
+hidden_0200,NON_COMMITMENT,Question consulting others on timing

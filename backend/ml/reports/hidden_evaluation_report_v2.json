@@ -1,0 +1,320 @@
+{
+  "model_version": "V2",
+  "model_path": "C:\\Users\\Admin\\Desktop\\promiseos\\backend\\ml\\models\\commitment_classifier_v2.joblib",
+  "dataset": "hidden_surprise",
+  "total_samples": 200,
+  "overall_metrics": {
+    "accuracy": 0.85,
+    "precision": 0.8241,
+    "recall": 0.89,
+    "f1": 0.8558,
+    "support": {
+      "total": 200,
+      "commitment": 100,
+      "non_commitment": 100
+    },
+    "confusion_matrix": {
+      "labels": [
+        "NON_COMMITMENT",
+        "COMMITMENT"
+      ],
+      "matrix": [
+        [
+          81,
+          19
+        ],
+        [
+          11,
+          89
+        ]
+      ],
+      "tn": 81,
+      "fp": 19,
+      "fn": 11,
+      "tp": 89
+    }
+  },
+  "difficulty_breakdown": {
+    "easy": {
+      "accuracy": 0.6,
+      "precision": 0.2308,
+      "recall": 1.0,
+      "f1": 0.375,
+      "support": {
+        "total": 25,
+        "commitment": 3,
+        "non_commitment": 22
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            12,
+            10
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "tn": 12,
+        "fp": 10,
+        "fn": 0,
+        "tp": 3
+      }
+    },
+    "medium": {
+      "accuracy": 0.8537,
+      "precision": 1.0,
+      "recall": 0.85,
+      "f1": 0.9189,
+      "support": {
+        "total": 41,
+        "commitment": 40,
+        "non_commitment": 1
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            6,
+            34
+          ]
+        ],
+        "tn": 1,
+        "fp": 0,
+        "fn": 6,
+        "tp": 34
+      }
+    },
+    "hard": {
+      "accuracy": 0.8955,
+      "precision": 0.8525,
+      "recall": 0.9123,
+      "f1": 0.8814,
+      "support": {
+        "total": 134,
+        "commitment": 57,
+        "non_commitment": 77
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            68,
+            9
+          ],
+          [
+            5,
+            52
+          ]
+        ],
+        "tn": 68,
+        "fp": 9,
+        "fn": 5,
+        "tp": 52
+      }
+    }
+  },
+  "domain_breakdown": {
+    "academic_student": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": {
+        "total": 38,
+        "commitment": 19,
+        "non_commitment": 19
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            19,
+            0
+          ],
+          [
+            0,
+            19
+          ]
+        ],
+        "tn": 19,
+        "fp": 0,
+        "fn": 0,
+        "tp": 19
+      }
+    },
+    "engineering": {
+      "accuracy": 0.9167,
+      "precision": 1.0,
+      "recall": 0.8718,
+      "f1": 0.9315,
+      "support": {
+        "total": 60,
+        "commitment": 39,
+        "non_commitment": 21
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            21,
+            0
+          ],
+          [
+            5,
+            34
+          ]
+        ],
+        "tn": 21,
+        "fp": 0,
+        "fn": 5,
+        "tp": 34
+      }
+    },
+    "executive": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": {
+        "total": 20,
+        "commitment": 1,
+        "non_commitment": 19
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            19,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "tn": 19,
+        "fp": 0,
+        "fn": 0,
+        "tp": 1
+      }
+    },
+    "operations": {
+      "accuracy": 0.7143,
+      "precision": 1.0,
+      "recall": 0.7,
+      "f1": 0.8235,
+      "support": {
+        "total": 21,
+        "commitment": 20,
+        "non_commitment": 1
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            6,
+            14
+          ]
+        ],
+        "tn": 1,
+        "fp": 0,
+        "fn": 6,
+        "tp": 14
+      }
+    },
+    "project": {
+      "accuracy": 0.7692,
+      "precision": 0.6786,
+      "recall": 1.0,
+      "f1": 0.8085,
+      "support": {
+        "total": 39,
+        "commitment": 19,
+        "non_commitment": 20
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            11,
+            9
+          ],
+          [
+            0,
+            19
+          ]
+        ],
+        "tn": 11,
+        "fp": 9,
+        "fn": 0,
+        "tp": 19
+      }
+    },
+    "sales_client": {
+      "accuracy": 0.5455,
+      "precision": 0.1667,
+      "recall": 1.0,
+      "f1": 0.2857,
+      "support": {
+        "total": 22,
+        "commitment": 2,
+        "non_commitment": 20
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            10,
+            10
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "tn": 10,
+        "fp": 10,
+        "fn": 0,
+        "tp": 2
+      }
+    }
+  }
+}

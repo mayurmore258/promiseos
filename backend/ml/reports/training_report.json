@@ -1,0 +1,98 @@
+{
+  "selected_algorithm": "logistic_regression",
+  "random_seed": 42,
+  "feature_representation": {
+    "type": "TF-IDF (1-2 grams)",
+    "max_features": 5000,
+    "min_df": 2,
+    "sublinear_tf": true,
+    "preprocessor": "clean_text"
+  },
+  "model_hyperparameters": {
+    "algorithm": "logistic_regression",
+    "C": 1.0,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "dataset_splits": {
+    "train_size": 700,
+    "validation_size": 150,
+    "test_size": 150
+  },
+  "algorithm_comparison_on_validation": {
+    "logistic_regression": {
+      "accuracy": 0.98,
+      "precision": 0.9737,
+      "recall": 0.9867,
+      "f1": 0.9801
+    },
+    "linear_svm": {
+      "accuracy": 0.98,
+      "precision": 0.9737,
+      "recall": 0.9867,
+      "f1": 0.9801
+    }
+  },
+  "validation_metrics": {
+    "accuracy": 0.98,
+    "precision": 0.9737,
+    "recall": 0.9867,
+    "f1": 0.9801,
+    "support": {
+      "total": 150,
+      "commitment": 75,
+      "non_commitment": 75
+    },
+    "confusion_matrix": {
+      "labels": [
+        "NON_COMMITMENT",
+        "COMMITMENT"
+      ],
+      "matrix": [
+        [
+          73,
+          2
+        ],
+        [
+          1,
+          74
+        ]
+      ],
+      "tn": 73,
+      "fp": 2,
+      "fn": 1,
+      "tp": 74
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.98,
+    "precision": 0.9737,
+    "recall": 0.9867,
+    "f1": 0.9801,
+    "support": {
+      "total": 150,
+      "commitment": 75,
+      "non_commitment": 75
+    },
+    "confusion_matrix": {
+      "labels": [
+        "NON_COMMITMENT",
+        "COMMITMENT"
+      ],
+      "matrix": [
+        [
+          73,
+          2
+        ],
+        [
+          1,
+          74
+        ]
+      ],
+      "tn": 73,
+      "fp": 2,
+      "fn": 1,
+      "tp": 74
+    }
+  }
+}

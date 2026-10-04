@@ -1,0 +1,130 @@
+{
+  "dataset": "hidden_surprise",
+  "total_samples": 200,
+  "overall_metrics": {
+    "accuracy": 0.595,
+    "precision": 0.576,
+    "recall": 0.72,
+    "f1": 0.64,
+    "support": {
+      "total": 200,
+      "commitment": 100,
+      "non_commitment": 100
+    },
+    "confusion_matrix": {
+      "labels": [
+        "NON_COMMITMENT",
+        "COMMITMENT"
+      ],
+      "matrix": [
+        [
+          47,
+          53
+        ],
+        [
+          28,
+          72
+        ]
+      ],
+      "tn": 47,
+      "fp": 53,
+      "fn": 28,
+      "tp": 72
+    }
+  },
+  "difficulty_breakdown": {
+    "easy": {
+      "accuracy": 0.36,
+      "precision": 0.1579,
+      "recall": 1.0,
+      "f1": 0.2727,
+      "support": {
+        "total": 25,
+        "commitment": 3,
+        "non_commitment": 22
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            6,
+            16
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "tn": 6,
+        "fp": 16,
+        "fn": 0,
+        "tp": 3
+      }
+    },
+    "medium": {
+      "accuracy": 0.7561,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "support": {
+        "total": 41,
+        "commitment": 40,
+        "non_commitment": 1
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            10,
+            30
+          ]
+        ],
+        "tn": 1,
+        "fp": 0,
+        "fn": 10,
+        "tp": 30
+      }
+    },
+    "hard": {
+      "accuracy": 0.5896,
+      "precision": 0.5132,
+      "recall": 0.6842,
+      "f1": 0.5865,
+      "support": {
+        "total": 134,
+        "commitment": 57,
+        "non_commitment": 77
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            40,
+            37
+          ],
+          [
+            18,
+            39
+          ]
+        ],
+        "tn": 40,
+        "fp": 37,
+        "fn": 18,
+        "tp": 39
+      }
+    }
+  }
+}

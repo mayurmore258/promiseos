@@ -1,0 +1,152 @@
+{
+  "model_version": "v2_calibrated",
+  "base_model": "LinearSVC (C=1.0, balanced)",
+  "calibration_method": "CalibratedClassifierCV (method='sigmoid', cv=3)",
+  "feature_representation": {
+    "type": "TF-IDF (1-2 ngrams)",
+    "max_features": 8000,
+    "min_df": 2,
+    "sublinear_tf": true,
+    "preprocessor": "clean_text"
+  },
+  "training_data_used": {
+    "train_v2_total": 1020,
+    "core_train": 700,
+    "hard_train": 320
+  },
+  "interface_verification": {
+    "has_predict": true,
+    "has_predict_proba": true,
+    "has_decision_function": false,
+    "classes": [
+      "COMMITMENT",
+      "NON_COMMITMENT"
+    ]
+  },
+  "metrics": {
+    "original_validation": {
+      "accuracy": 0.9933,
+      "precision": 1.0,
+      "recall": 0.9867,
+      "f1": 0.9933,
+      "support": {
+        "total": 150,
+        "commitment": 75,
+        "non_commitment": 75
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            75,
+            0
+          ],
+          [
+            1,
+            74
+          ]
+        ],
+        "tn": 75,
+        "fp": 0,
+        "fn": 1,
+        "tp": 74
+      }
+    },
+    "hard_validation": {
+      "accuracy": 0.9333,
+      "precision": 0.9062,
+      "recall": 0.9667,
+      "f1": 0.9355,
+      "support": {
+        "total": 120,
+        "commitment": 60,
+        "non_commitment": 60
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            54,
+            6
+          ],
+          [
+            2,
+            58
+          ]
+        ],
+        "tn": 54,
+        "fp": 6,
+        "fn": 2,
+        "tp": 58
+      }
+    },
+    "combined_validation": {
+      "accuracy": 0.9667,
+      "precision": 0.9565,
+      "recall": 0.9778,
+      "f1": 0.967,
+      "support": {
+        "total": 270,
+        "commitment": 135,
+        "non_commitment": 135
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            129,
+            6
+          ],
+          [
+            3,
+            132
+          ]
+        ],
+        "tn": 129,
+        "fp": 6,
+        "fn": 3,
+        "tp": 132
+      }
+    },
+    "original_test": {
+      "accuracy": 0.9867,
+      "precision": 0.9867,
+      "recall": 0.9867,
+      "f1": 0.9867,
+      "support": {
+        "total": 150,
+        "commitment": 75,
+        "non_commitment": 75
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NON_COMMITMENT",
+          "COMMITMENT"
+        ],
+        "matrix": [
+          [
+            74,
+            1
+          ],
+          [
+            1,
+            74
+          ]
+        ],
+        "tn": 74,
+        "fp": 1,
+        "fn": 1,
+        "tp": 74
+      }
+    }
+  }
+}

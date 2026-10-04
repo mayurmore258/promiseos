@@ -1,0 +1,48 @@
+{
+  "title": "PromiseOS Commitment Classifier — Round 2 V1 vs V2 Comparison",
+  "generated_at": "2026-10-04T09:37:30Z",
+  "models": {
+    "v1": {
+      "path": "backend/ml/models/commitment_classifier.joblib",
+      "algorithm": "LogisticRegression (C=1.0, balanced)",
+      "feature_representation": "TF-IDF (1-2 ngrams, max_features=5000, sublinear_tf=True)",
+      "training_dataset_size": 700
+    },
+    "v2": {
+      "path": "backend/ml/models/commitment_classifier_v2.joblib",
+      "algorithm": "LinearSVC (C=1.0, balanced)",
+      "feature_representation": "TF-IDF (1-2 ngrams, max_features=8000, sublinear_tf=True)",
+      "training_dataset_size": 1020
+    }
+  },
+  "metrics_comparison": {
+    "original_validation": {
+      "v1": { "accuracy": 0.9800, "precision": 0.9737, "recall": 0.9867, "f1": 0.9801 },
+      "v2": { "accuracy": 0.9867, "precision": 0.9867, "recall": 0.9867, "f1": 0.9867 },
+      "delta_f1": 0.0066
+    },
+    "original_test": {
+      "v1": { "accuracy": 0.9800, "precision": 0.9737, "recall": 0.9867, "f1": 0.9801 },
+      "v2": { "accuracy": 0.9933, "precision": 0.9868, "recall": 1.0000, "f1": 0.9934 },
+      "delta_f1": 0.0133
+    },
+    "hard_validation": {
+      "v1": { "accuracy": 0.6917, "precision": 0.6304, "recall": 0.9667, "f1": 0.7632 },
+      "v2": { "accuracy": 0.9333, "precision": 0.9062, "recall": 0.9667, "f1": 0.9355 },
+      "delta_f1": 0.1723
+    },
+    "hidden_surprise": {
+      "v1": { "accuracy": 0.5950, "precision": 0.5760, "recall": 0.7200, "f1": 0.6400 },
+      "v2": { "accuracy": 0.8500, "precision": 0.8241, "recall": 0.8900, "f1": 0.8558 },
+      "delta_f1": 0.2158,
+      "delta_accuracy": 0.2550,
+      "delta_precision": 0.2481,
+      "delta_recall": 0.1700
+    }
+  },
+  "hidden_confusion_matrices": {
+    "v1": { "tn": 47, "fp": 53, "fn": 28, "tp": 72 },
+    "v2": { "tn": 81, "fp": 19, "fn": 11, "tp": 89 }
+  },
+  "decision": "V2 is the better candidate, but is NOT yet promoted to production"
+}

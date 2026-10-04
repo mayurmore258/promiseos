@@ -1,0 +1,201 @@
+id,text,domain,difficulty,has_deadline,has_condition,has_owner,language_style,source_type
+hidden_0001,Was the disaster recovery plan sent to the client by 4 PM today?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0002,I definitely cannot commit to the onboarding walkthrough first thing Monday.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0003,Count on me: the disaster recovery plan will be completed and uploaded first thing Monday.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0004,Rest assured that I will finalize the quarterly tax filing by tomorrow noon.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0005,Count on me: the vendor contract appendix will be completed and uploaded by 4 PM today.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0006,Do you think we should submit the disaster recovery plan by tomorrow noon?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0007,Was the onboarding walkthrough sent to the client by 4 PM today?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0008,"Assuming the API key arrives, I'll integrate the payment gateway tonight.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0009,I am considering rewriting the compliance questionnaire whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0010,I will personally deliver the quarterly tax filing to the department office first thing Monday.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0011,Was the compliance questionnaire sent to the client first thing Monday?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0012,I definitely cannot commit to the quarterly tax filing by tomorrow noon.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0013,Rest assured that I will finalize the disaster recovery plan first thing Monday.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0014,It would be wonderful if the vendor contract appendix could be ready by tomorrow noon.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0015,I'm locking myself in to finish the vendor contract appendix by 4 PM today.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0016,I will draft the response to the customer complaint right after this standup.,sales_client,easy,True,False,True,professional,synthetic_adversarial
+hidden_0017,Can we make sure someone checks the backup logs before Friday?,engineering,hard,True,False,False,professional,synthetic_adversarial
+hidden_0018,Rest assured that I will finalize the disaster recovery plan by 4 PM today.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0019,Was the disaster recovery plan sent to the client first thing Monday?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0020,I will personally deliver the onboarding walkthrough to the department office by tomorrow noon.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0021,"I'll have the updated pricing matrix in your inbox before lunch, guaranteed.",sales_client,hard,True,False,True,professional,synthetic_adversarial
+hidden_0022,"If Vikram provides the logs, I will diagnose the issue by tomorrow noon.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0023,I definitely cannot commit to the disaster recovery plan first thing Monday.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0024,I definitely cannot commit to the onboarding walkthrough by tomorrow noon.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0025,I'm locking myself in to finish the onboarding walkthrough by tomorrow noon.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0026,Mayur confirmed he will push the database migration before 11 PM.,engineering,medium,True,False,True,professional,synthetic_adversarial
+hidden_0027,Count on me: the vendor contract appendix will be completed and uploaded by tomorrow noon.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0028,Was the quarterly tax filing sent to the client by 4 PM today?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0029,Do you think we should submit the onboarding walkthrough by 4 PM today?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0030,I definitely cannot commit to the onboarding walkthrough by 4 PM today.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0031,I'm locking myself in to finish the vendor contract appendix by tomorrow noon.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0032,I am considering rewriting the onboarding walkthrough whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0033,I will personally deliver the compliance questionnaire to the department office by tomorrow noon.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0034,Team: I'm taking full responsibility for the broken build; fixing it now and deploying by 2 AM.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0035,I definitely cannot commit to the compliance questionnaire by 4 PM today.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0036,Rest assured that I will finalize the onboarding walkthrough first thing Monday.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0037,I'll send you the Figma prototype as soon as I finish the responsive breakpoint.,project,medium,False,True,True,professional,synthetic_adversarial
+hidden_0038,I will personally deliver the disaster recovery plan to the department office by 4 PM today.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0039,I'm locking myself in to finish the compliance questionnaire first thing Monday.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0040,"If Priya provides the logs, I will diagnose the issue first thing Monday.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0041,I definitely cannot commit to the quarterly tax filing first thing Monday.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0042,Rest assured that I will finalize the quarterly tax filing first thing Monday.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0043,I definitely cannot commit to the onboarding walkthrough by 4 PM today.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0044,I definitely cannot commit to the vendor contract appendix first thing Monday.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0045,I definitely cannot commit to the compliance questionnaire first thing Monday.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0046,Please remember to turn off the lab equipment when you leave tonight.,academic_student,medium,True,False,False,informal_chat,synthetic_adversarial
+hidden_0047,I will personally deliver the compliance questionnaire to the department office first thing Monday.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0048,It would be wonderful if the onboarding walkthrough could be ready by 4 PM today.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0049,Do you think we should submit the compliance questionnaire first thing Monday?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0050,I will compile the executive summary and email it to the board prior to Friday's call.,executive,easy,True,False,True,professional,synthetic_adversarial
+hidden_0051,I am considering rewriting the compliance questionnaire whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0052,I am considering rewriting the quarterly tax filing whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0053,I might take a look at the pull request if time permits tomorrow.,engineering,hard,True,True,False,professional,synthetic_adversarial
+hidden_0054,"If Priya provides the logs, I will diagnose the issue by tomorrow noon.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0055,It would be wonderful if the compliance questionnaire could be ready by 4 PM today.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0056,I will personally deliver the onboarding walkthrough to the department office first thing Monday.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0057,Rest assured that I will finalize the disaster recovery plan by 4 PM today.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0058,Do you think we should submit the disaster recovery plan by 4 PM today?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0059,I am considering rewriting the vendor contract appendix whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0060,I will personally deliver the compliance questionnaire to the department office by 4 PM today.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0061,Rest assured that I will finalize the vendor contract appendix first thing Monday.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0062,I'm locking myself in to finish the disaster recovery plan by 4 PM today.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0063,Count on me: the onboarding walkthrough will be completed and uploaded by tomorrow noon.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0064,I promise to review all 14 student applications before the committee meets on Tuesday.,academic_student,easy,True,False,True,informal_chat,synthetic_adversarial
+hidden_0065,"If David provides the logs, I will diagnose the issue first thing Monday.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0066,I will personally deliver the quarterly tax filing to the department office by tomorrow noon.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0067,Rest assured that I will finalize the onboarding walkthrough by tomorrow noon.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0068,"If Mayur provides the logs, I will diagnose the issue first thing Monday.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0069,I'm locking myself in to finish the quarterly tax filing by tomorrow noon.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0070,Great job on finishing the sprint goals ahead of schedule!,project,easy,False,False,False,professional,synthetic_adversarial
+hidden_0071,Do you think we should submit the onboarding walkthrough by tomorrow noon?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0072,I definitely cannot commit to the disaster recovery plan by tomorrow noon.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0073,Do you think we should submit the quarterly tax filing first thing Monday?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0074,I will personally deliver the compliance questionnaire to the department office by tomorrow noon.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0075,Rest assured that I will finalize the quarterly tax filing first thing Monday.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0076,Do you think we should submit the disaster recovery plan first thing Monday?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0077,Count on me: the compliance questionnaire will be completed and uploaded by 4 PM today.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0078,Count on me: the onboarding walkthrough will be completed and uploaded first thing Monday.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0079,I'm locking myself in to finish the quarterly tax filing by tomorrow noon.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0080,I'm locking myself in to finish the vendor contract appendix first thing Monday.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0081,It would be wonderful if the vendor contract appendix could be ready by 4 PM today.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0082,Count on me: the compliance questionnaire will be completed and uploaded first thing Monday.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0083,"If Vikram provides the logs, I will diagnose the issue first thing Monday.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0084,I definitely cannot commit to the vendor contract appendix first thing Monday.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0085,Was the disaster recovery plan sent to the client by tomorrow noon?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0086,"If Priya provides the logs, I will diagnose the issue by tomorrow noon.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0087,I'm locking myself in to finish the disaster recovery plan first thing Monday.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0088,I definitely cannot commit to the vendor contract appendix by 4 PM today.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0089,Count on me: the quarterly tax filing will be completed and uploaded by 4 PM today.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0090,It would be wonderful if the disaster recovery plan could be ready by tomorrow noon.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0091,I am considering rewriting the compliance questionnaire whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0092,I'm locking myself in to finish the onboarding walkthrough by 4 PM today.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0093,Rest assured that I will finalize the onboarding walkthrough by tomorrow noon.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0094,Did you see the client's email regarding the price negotiation?,sales_client,easy,False,False,False,professional,synthetic_adversarial
+hidden_0095,It would be wonderful if the vendor contract appendix could be ready first thing Monday.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0096,Do you think we should submit the compliance questionnaire by tomorrow noon?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0097,Do you think we should submit the compliance questionnaire by 4 PM today?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0098,Count on me: the quarterly tax filing will be completed and uploaded by tomorrow noon.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0099,I will personally deliver the quarterly tax filing to the department office by 4 PM today.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0100,I will personally deliver the onboarding walkthrough to the department office by 4 PM today.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0101,Do you think we should submit the quarterly tax filing first thing Monday?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0102,Rest assured that I will finalize the vendor contract appendix by tomorrow noon.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0103,Was the onboarding walkthrough sent to the client first thing Monday?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0104,I will personally deliver the vendor contract appendix to the department office first thing Monday.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0105,It would be wonderful if the compliance questionnaire could be ready first thing Monday.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0106,It would be wonderful if the onboarding walkthrough could be ready first thing Monday.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0107,Count on me: the onboarding walkthrough will be completed and uploaded first thing Monday.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0108,I'm locking myself in to finish the compliance questionnaire by 4 PM today.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0109,Count on me: the disaster recovery plan will be completed and uploaded by 4 PM today.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0110,Was the vendor contract appendix sent to the client by tomorrow noon?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0111,"If Vikram provides the logs, I will diagnose the issue first thing Monday.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0112,I am considering rewriting the vendor contract appendix whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0113,Count on me: the compliance questionnaire will be completed and uploaded by tomorrow noon.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0114,I really should send the revised quotation to the client soon.,sales_client,hard,False,False,False,professional,synthetic_adversarial
+hidden_0115,Rest assured that I will finalize the quarterly tax filing by 4 PM today.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0116,Rest assured that I will finalize the disaster recovery plan by tomorrow noon.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0117,Do you think we should submit the onboarding walkthrough by tomorrow noon?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0118,Rest assured that I will finalize the compliance questionnaire by tomorrow noon.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0119,It would be wonderful if the disaster recovery plan could be ready first thing Monday.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0120,Rest assured that I will finalize the compliance questionnaire first thing Monday.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0121,I definitely cannot commit to the compliance questionnaire by tomorrow noon.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0122,Was the onboarding walkthrough sent to the client first thing Monday?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0123,It would be wonderful if the disaster recovery plan could be ready by 4 PM today.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0124,I am considering rewriting the disaster recovery plan whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0125,"If Vikram provides the logs, I will diagnose the issue by tomorrow noon.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0126,I will personally deliver the vendor contract appendix to the department office first thing Monday.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0127,Count on me: the vendor contract appendix will be completed and uploaded first thing Monday.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0128,The system outage lasted for approximately forty-three minutes yesterday.,operations,easy,False,False,False,professional,synthetic_adversarial
+hidden_0129,It would be wonderful if the quarterly tax filing could be ready first thing Monday.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0130,I will personally deliver the disaster recovery plan to the department office by tomorrow noon.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0131,I am considering rewriting the quarterly tax filing whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0132,Was the vendor contract appendix sent to the client by tomorrow noon?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0133,I am considering rewriting the disaster recovery plan whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0134,I definitely cannot commit to the vendor contract appendix by tomorrow noon.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0135,Was the quarterly tax filing sent to the client first thing Monday?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0136,Count on me: the disaster recovery plan will be completed and uploaded by tomorrow noon.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0137,"If David provides the logs, I will diagnose the issue by 4 PM today.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0138,I will personally deliver the vendor contract appendix to the department office by tomorrow noon.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0139,"In my view, we must prioritize user privacy over speed.",engineering,easy,False,False,False,professional,synthetic_adversarial
+hidden_0140,I am considering rewriting the onboarding walkthrough whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0141,I'm locking myself in to finish the quarterly tax filing by 4 PM today.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0142,Count on me: the onboarding walkthrough will be completed and uploaded by 4 PM today.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0143,"If Mayur provides the logs, I will diagnose the issue by 4 PM today.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0144,I definitely cannot commit to the disaster recovery plan by 4 PM today.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0145,I'm locking myself in to finish the compliance questionnaire by tomorrow noon.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0146,Do you think we should submit the disaster recovery plan by 4 PM today?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0147,Was the compliance questionnaire sent to the client by tomorrow noon?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0148,It would be wonderful if the compliance questionnaire could be ready by tomorrow noon.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0149,I'm locking myself in to finish the disaster recovery plan first thing Monday.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0150,Do you think we should submit the vendor contract appendix first thing Monday?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0151,I will personally deliver the onboarding walkthrough to the department office by 4 PM today.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0152,I will personally deliver the disaster recovery plan to the department office first thing Monday.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0153,Leave the invoice dispute to me; I will call their accounting department tomorrow morning.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0154,I am considering rewriting the vendor contract appendix whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0155,"If David provides the logs, I will diagnose the issue by 4 PM today.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0156,"I was hoping to finish the slide deck tonight, but I feel under the weather.",project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0157,"If David provides the logs, I will diagnose the issue first thing Monday.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0158,Count on me: the quarterly tax filing will be completed and uploaded first thing Monday.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0159,Was the quarterly tax filing sent to the client by tomorrow noon?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0160,Do you think we should submit the quarterly tax filing by tomorrow noon?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0161,I am considering rewriting the quarterly tax filing whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0162,"If Vikram provides the logs, I will diagnose the issue by 4 PM today.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0163,Was the vendor contract appendix sent to the client first thing Monday?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0164,I will personally deliver the vendor contract appendix to the department office by 4 PM today.,academic_student,medium,True,False,True,informal_chat,synthetic_adversarial
+hidden_0165,Rest assured that I will finalize the vendor contract appendix by 4 PM today.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0166,It would be wonderful if the quarterly tax filing could be ready by 4 PM today.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0167,"If Mayur provides the logs, I will diagnose the issue by 4 PM today.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0168,It would be wonderful if the disaster recovery plan could be ready by tomorrow noon.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0169,I definitely cannot commit to the compliance questionnaire by tomorrow noon.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0170,I am considering rewriting the disaster recovery plan whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0171,I am considering rewriting the quarterly tax filing whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0172,It would be wonderful if the compliance questionnaire could be ready first thing Monday.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0173,I'm locking myself in to finish the quarterly tax filing first thing Monday.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0174,It would be wonderful if the vendor contract appendix could be ready by 4 PM today.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0175,I am considering rewriting the onboarding walkthrough whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0176,I won't be able to prepare the quarterly balance sheet this month.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0177,I'm locking myself in to finish the compliance questionnaire by 4 PM today.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0178,I am considering rewriting the disaster recovery plan whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0179,I definitely cannot commit to the quarterly tax filing by 4 PM today.,project,hard,True,False,False,professional,synthetic_adversarial
+hidden_0180,It would be wonderful if the quarterly tax filing could be ready by tomorrow noon.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0181,Do you think we should submit the vendor contract appendix by tomorrow noon?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0182,Was the onboarding walkthrough sent to the client by tomorrow noon?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0183,"If Mayur provides the logs, I will diagnose the issue by tomorrow noon.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0184,Do you think we should submit the onboarding walkthrough first thing Monday?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0185,Was the quarterly tax filing sent to the client by 4 PM today?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0186,I'm locking myself in to finish the disaster recovery plan by tomorrow noon.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0187,Was the vendor contract appendix sent to the client by 4 PM today?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0188,I am considering rewriting the compliance questionnaire whenever we get a chance.,engineering,hard,False,False,False,professional,synthetic_adversarial
+hidden_0189,It would be wonderful if the onboarding walkthrough could be ready by tomorrow noon.,executive,hard,True,False,False,professional,synthetic_adversarial
+hidden_0190,Count on me: the vendor contract appendix will be completed and uploaded by tomorrow noon.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0191,Rest assured that I will finalize the compliance questionnaire by 4 PM today.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0192,Was the compliance questionnaire sent to the client by 4 PM today?,sales_client,easy,True,False,False,professional,synthetic_adversarial
+hidden_0193,"If Priya provides the logs, I will diagnose the issue by 4 PM today.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0194,Rest assured that I will finalize the onboarding walkthrough by 4 PM today.,project,hard,True,False,True,professional,synthetic_adversarial
+hidden_0195,"If David provides the logs, I will diagnose the issue by tomorrow noon.",engineering,hard,True,True,True,professional,synthetic_adversarial
+hidden_0196,"Don't worry about the presentation clicker, I will bring my spare one to the room at 9 AM.",operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0197,Count on me: the quarterly tax filing will be completed and uploaded by 4 PM today.,operations,medium,True,False,True,professional,synthetic_adversarial
+hidden_0198,Do you think we should submit the quarterly tax filing by 4 PM today?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
+hidden_0199,I'm locking myself in to finish the onboarding walkthrough first thing Monday.,engineering,hard,True,False,True,professional,synthetic_adversarial
+hidden_0200,Do you think we should submit the vendor contract appendix by 4 PM today?,academic_student,hard,True,False,False,informal_chat,synthetic_adversarial
